@@ -6,11 +6,12 @@ function mostrar()
 
 // var person = prompt("Please enter your name", "Harry Potter");
 
-/* variable
+/* variable es una zona de la memoria donde se guarda un dato
+
 */
 var nombre;
 
-nombre =prompt("ingrese su nombre", "lautaro");
+nombre =prompt("ingrese su nombre",);
 //usar siempre minuscula en alert
 //no olvidarse el punto y coma
 alert("su nombre es " +nombre);

@@ -8,9 +8,9 @@ var numerouno= document.getElementById('numeroUno').value;
 
 var numerodos= document.getElementById('numeroDos').value;
 
-var resultado= parseInt(numerouno)+parseInt(numerodos);
+var resultado= parseInt(numerouno)+parseInt(numerodos); 
 
-alert("la suma es "+resultado)
+alert("la suma es "+resultado);
 
 }
 
