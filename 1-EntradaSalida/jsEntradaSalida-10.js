@@ -9,7 +9,7 @@ var sueldo;
 var descuento;
 sueldo=document.getElementById('importe').value; //aca se pone value para mostrar el get
 sueldo=parseInt(sueldo);
-adescuento=sueldo/0.25;
-document.getElementById('resultado').value=aumento;		
-aler(aumento);
+descuento=sueldo-sueldo*0.25;
+document.getElementById('resultado').value=descuento;		
+aler(descuento);
 }
