@@ -4,45 +4,57 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	var numerouno= document.getElementById('numeroUno').value;
-
-	var numerodos= document.getElementById('numeroDos').value;
-
-	var resultado= parseInt(numerouno) +parseInt(numerodos);
-
+	var numerouno 
+	var numerodos 
+	var resultado
+    numerouno=document.getElementById('numeroUno').value;
+    numerouno=parseInt(numeroUno)
+	numerodos=document.getElementById('numeroDos').value;
+	numerodos=parseInt(numeroDos);
+	resultado=numeroUno + numeroDos
 	alert("la suma es "+ resultado);
+
+
+
+
 }
 
 function restar()
 {
-	var numerouno= document.getElementById('numeroUno').value;
-
-	var numerodos= document.getElementById('numeroDos').value;
-
-	var resultado= parseInt(numerouno)-parseInt(numerodos);
-
+	var numerouno 
+	var numerodos 
+	var resultado
+    numeroUno=document.getElementById('numeroUno').value;
+    numeroUno=parseInt(numeroUno)
+	numeroDos=document.getElementById('numeroDos').value;
+	numeroDos=parseInt(numeroDos);
+	resultado=numeroUno - numeroDos
 	alert("la resta es "+ resultado);
 }
 
 function multiplicar()
 { 
-	var numerouno= document.getElementById('numeroUno').value;
-
-	var numerodos= document.getElementById('numeroDos').value;
-
-	var resultado= parseInt(numerouno)*parseInt(numerodos);
-
+	var numerouno 
+	var numerodos 
+	var resultado
+    numeroUno=document.getElementById('numeroUno').value;
+    numeroUno=parseInt(numeroUno)
+	numeroDos=document.getElementById('numeroDos').value;
+	numeroDos=parseInt(numeroDos);
+	resultado=numeroUno * numeroDos
 	alert("la multiplicacion es "+ resultado);
 }
 
 function dividir()
 {
-	var numerouno= document.getElementById('numeroUno').value;
-
-	var numerodos= document.getElementById('numeroDos').value;
-
-	var resultado= parseInt(numerouno)/parseInt(numerodos);
-
+	var numerouno 
+	var numerodos 
+	var resultado
+    numeroUno=document.getElementById('numeroUno').value;
+    numeroUno=parseInt(numeroUno)
+	numeroDos=document.getElementById('numeroDos').value;
+	numeroDos=parseInt(numeroDos);
+	resultado=numeroUno / numeroDos
 	alert("la division es "+ resultado);
 }
 

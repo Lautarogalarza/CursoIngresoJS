@@ -10,7 +10,6 @@ function mostrar()
 
 */
 var nombre;
-
 nombre =prompt("ingrese su nombre",);
 //usar siempre minuscula en alert
 //no olvidarse el punto y coma
