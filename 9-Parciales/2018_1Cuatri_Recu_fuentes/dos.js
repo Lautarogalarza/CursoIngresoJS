@@ -1,10 +1,13 @@
 function mostrar()
 {
-  var Nombre;
-  var localidad;
-Nombre=document.getElementById('elNombre').value;
+  
+var nombre;
+var localidad;
+/*toma dato*/nombre=document.getElementById('elNombre').value;/*muestra dato*/
 localidad=document.getElementById('laLocalidad').value;
 
-alert("usted es "+ Nombre+ " y vive en la localidad de "+localidad);
+alert("usted es "+nombre+" y vive en la localiad de "+localidad);
+
+
 
 }
