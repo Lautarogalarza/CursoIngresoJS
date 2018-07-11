@@ -4,10 +4,10 @@
 */
 function mostrar()
 {
- var nombre;
- nombre=prompt("ingrese su nombre");
- document.getElementById('elNombre').value=nombre; //al poner la variable al final hace 
- //que el id aparezca en el cuadro del texto del html
+	
+var nombre;
+nombre=prompt("ingrese su nombre ");
+document.getElementById('elNombre').value=nombre;
 
 
 }
