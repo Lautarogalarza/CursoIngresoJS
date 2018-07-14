@@ -14,20 +14,21 @@ if(edad<=13 && edad>=17)
 
 }
 
-else if  (edad>=18)
+  else if  (edad>=18)
 
-{
+ {
 
- alert("es un adulto")
+  alert("es un adulto")
 
-}
+ }
 
-else
-{
+ else
+ 	
+ {
 
- alert("es un niño")
+  alert("es un niño")
 
-}
+ }
 
 
 
