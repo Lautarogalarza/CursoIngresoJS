@@ -10,7 +10,7 @@ edad=document.getElementById('edad').value;
 estadocivil=document.getElementById('estadoCivil').value;
 edad=parseInt(edad);
 
-if(edad<18 && estadocivil !="soltero")
+if(edad<18 && estadocivil !="Soltero")
 {
 
 alert("es muy pequeño para no ser soltero")
