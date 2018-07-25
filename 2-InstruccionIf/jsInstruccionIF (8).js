@@ -1,21 +1,18 @@
 function mostrar()
 {
-//tomo la edad  
+	//tomo la edad  
+	var edad
+	var estadoCivil
 
-var edad;
+	edad=document.getElementById('edad').value;
 
-var estadocivil;
+	estadoCivil=document.getElementById('estadoCivil').value;
 
-edad=document.getElementById('edad').value;
-estadocivil=document.getElementById('estadoCivil').value;
-edad=parseInt(edad);
-
-if(!(edad<18) && estadocivil =="Soltero")
-{
-
-alert(" es soltero y no es menor")
-
-}
+	if(edad>18 && estadoCivil=="Soltero")
+	{
+		alert("Es soltero y no es menor");
+	}
 
 
-}//FIN DE LA FUNCIÓN
+
+}	//FIN DE LA FUNCIÓN

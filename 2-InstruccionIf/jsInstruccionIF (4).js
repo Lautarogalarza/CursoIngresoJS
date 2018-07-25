@@ -2,23 +2,42 @@ function mostrar()
 {
 //tomo la edad  
 
-/*operadores de logica: or=||(o), and=&&(y) not=!(no)        
+/*
+operadores de logica: or=||(o), and=&&(y) not=!(no)        
                           
 |:pipe, &:ampersand
+
 */
 
-var edad;
-edad=document.getElementById('edad').value;
-edad=parseInt(edad);
+	var edad;
 
-// if(!(edad< || edad<17) )
-if(edad >= 13 && edad <= 17)
+	edad=document.getElementById('edad').value;
+	edad=parseInt(edad);
+	if(edad>=13 && edad<=17)
+	{
+		alert("es adolescente");
+	}
+
+
+/*
+if(edad<13)
 {
-
-alert("es adolescente");
-
+alert("es niño");
 }
 
+else if (edad>=13 && edad<=17)
+
+{
+
+ alert("es un adolescente")
+}
+else
+
+{
+
+alert("es adulto")
+}
+*/
 
 
 }//FIN DE LA FUNCIÓN
