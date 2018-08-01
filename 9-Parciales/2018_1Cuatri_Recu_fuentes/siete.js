@@ -11,7 +11,7 @@ mostrar:
 		3-cantidad de mujeres=1
 		4-cantidad de hombres=2
 	nombre
-		5: del mayor=pepe
+		5-del mayor=pepe
 		6-del menor=maria
 		7-del hombre de menor edad=jose
 
@@ -24,10 +24,16 @@ function mostrar()
 	var edad;
 	var respuesta="si";
 	var contador=0;
-	var contadorDemayores=0
-	var contadorDemenores=0
+	var contadorDemayores=0;
+	var contadorDemenores=0;
+	var contadorDehombres=0;
+	var contadorDemujeres=0;
+	//var nombreDelmenor;
+	//var nombreDelmayor;
+	//var nombreDelhombreMenor;
+	
 
-	while(contador<3)
+	while(contador<10)
 	{
 		contador++;
 		nombre=prompt("ingrese su nombre "+contador);
@@ -56,11 +62,38 @@ function mostrar()
 						contadorDemenores++	
 					}
 
+						if(sexo=="m")
 
+						{
+							contadorDehombres++
+	
+						}
+	
+							else
+								{
+									contadorDemujeres++
+								}
+									/*if(contador==1)
+									{
+										notaMasbaja=nota
+										sexoNotamasbaja=sexo
 
+									}
+									if(nota<notaMasbaja)
+									{
+					 					notaMasbaja=nota;
+									}
+									if(sexo<sexoNotamasbaja)
+									{
+										sexoNotamasbaja=sexo;
+									}
+								*/
 	}
 
-	
 	document.write("<br> la contidad de mayores es "+ contadorDemayores );
 	document.write("<br> la contidad de menores es "+ contadorDemenores );
+	document.write("<br> la cantidad de hombres es "+ contadorDehombres );
+	document.write("<br> la cantidad de mujeres es "+ contadorDemujeres );
+	//document.write("<br> el nombre del mayor es "+ nombreDelmayor );
+	//document.write("<br> el nombre del menor es "+ nombreDelmenor );
 }
