@@ -28,72 +28,123 @@ function mostrar()
 	var contadorDemenores=0;
 	var contadorDehombres=0;
 	var contadorDemujeres=0;
-	//var nombreDelmenor;
-	//var nombreDelmayor;
-	//var nombreDelhombreMenor;
+	var nombreDelmenor;
+	var edadDelmenor;
+	var nombreDelmayor;
+	var edadDelmayor
+	var nombreDelhombreMenor;
+	var edadDelhombreMenor
+	var bandera=0;
+	
 	
 
-	while(contador<10)
+	while(contador<3)
+
+		//pido los datos
 	{
 		contador++;
 		nombre=prompt("ingrese su nombre "+contador);
 		
 		sexo=prompt("ingrese sexo "+contador);
-
+		sexo=sexo.toLowerCase();
+		// valido si el sexo es correcto
 		while(sexo!="f" && sexo!="m")
 		{
 			sexo=prompt("ingrese un sexo correcto "+contador);
 		}
+			//pido la edad
 			edad=prompt("ingrese edad "+contador);
 			edad=parseInt(edad);
+			//valido si la edad es correcta
 			while(edad<0 || edad>100)
 			{
 				edad=prompt("ingrese una edad correcta "+contador)
 				edad=parseInt(edad);
 			}
-
-				if(edad>18)
+				// ME FIJO SI ES MAYOR O MENOR DE EDAD Y CUENTO
+				if(edad>=18)
 				{
 
-					contadorDemayores++
+					contadorDemayores++;
 				}	
+
 					else
 					{
-						contadorDemenores++	
+						contadorDemenores++;
 					}
-
+						//ME FIJO SI ES MASCULINO O FEMENINO Y CUENTO
 						if(sexo=="m")
 
 						{
-							contadorDehombres++
+							contadorDehombres++;
 	
 						}
 	
 							else
 								{
-									contadorDemujeres++
+									contadorDemujeres++;
 								}
+								// 	
+								if(  edad>edadDelmayor || bandera==0)
+									{   
+
+										edadDelmayor=edad;
+									    nombreDelmayor=nombre;
+										
+									}
+									if(edad<edadDelmenor || bandera==0)
+									{   
+
+										edadDelmenor=edad;
+									    nombreDelmenor=nombre;
+										
+										bandera=1;
+									}
+
+
+
+
 									/*if(contador==1)
 									{
-										notaMasbaja=nota
-										sexoNotamasbaja=sexo
+										edadDelmenor=edad;
+										nombreDelmenor=nombre;
+
+										edadDelmayor=edad;
+										nombreDelmayor=nombre;
 
 									}
-									if(nota<notaMasbaja)
+									if(edad<edadDelmenor)
 									{
-					 					notaMasbaja=nota;
+					 					edadDelmenor=edad;
+					 					nombreDelmenor=nombre;
 									}
-									if(sexo<sexoNotamasbaja)
+									if(edad>edadDelmayor)
 									{
-										sexoNotamasbaja=sexo;
+										edadDelmayor=edad;
+										nombreDelmayor=nombre;
+									}*/
+
+									if(sexo=='m' && contadorDehombres==1)
+									{
+										nombreDelhombreMenor=nombre;
+	                                    edadDelhombreMenor=edad;
 									}
-								*/
+
+									if(sexo=='m' && edad < edadDelhombreMenor)
+									{
+										nombreDelhombreMenor=nombre;
+	                                    edadDelhombreMenor=edad;
+									}	}
+
+	document.write("<br> la contidad de mayores es: "+ contadorDemayores );
+	document.write("<br> la contidad de menores es: "+ contadorDemenores );
+	document.write("<br> la cantidad de hombres es: "+ contadorDehombres );
+	document.write("<br> la cantidad de mujeres es: "+ contadorDemujeres );
+	document.write("<br> el nombre del mayor es: "+ nombreDelmayor );
+	document.write("<br> el nombre del menor es: "+ nombreDelmenor );
+	if(contadorDehombres==0)
+	{
+		nombreDelhombreMenor="no se ingreso ningun hombre"
 	}
-
-	document.write("<br> la contidad de mayores es "+ contadorDemayores );
-	document.write("<br> la contidad de menores es "+ contadorDemenores );
-	document.write("<br> la cantidad de hombres es "+ contadorDehombres );
-	document.write("<br> la cantidad de mujeres es "+ contadorDemujeres );
-	//document.write("<br> el nombre del mayor es "+ nombreDelmayor );
-	//document.write("<br> el nombre del menor es "+ nombreDelmenor );
+	document.write("<br> el nombre del hombre menor es: "+ nombreDelhombreMenor );
 }
