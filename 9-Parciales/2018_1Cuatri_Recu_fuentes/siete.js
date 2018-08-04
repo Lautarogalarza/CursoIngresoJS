@@ -1,9 +1,125 @@
 /*
+Realizar el algoritmo que permita el ingreso por prompt de las notas (validar entre 0 y 10),la edad y el sexo (validar el sexo “f” o “m”) 
+de 5 alumnos, informar por alert: 
+a) El promedio de las notas totales. 
+b) La nota más baja y el sexo de esa persona. 
+c) La cantidad de varones mayores a 18, que su nota haya sido mayor o igual a 6. 
+d) El sexo y la nota del más joven 
+d) La edad y la nota de la primera mujer ingresada o informar si no hubo ninguna mujer. 
+
+*/
+function mostrar()
+{
+
+var nota;
+var sexo;
+var edad;
+var promedio;
+var contador=0;
+var acumulador=0;
+var contadorVarones=0;
+var notaMasbaja;
+var sexoNotaMasbaja;
+var bandera=0;
+var sexodelMasjoven;
+var edadDelmasjoven;
+var notadelMasjoven;
+var contadorMujeres=0
+var edadDelaprimermujer;
+var notaDelaprimermujer;
+
+	//pido la edad
+
+while(contador<5)
+
+{
+	contador++;
+	edad=prompt("ingrese su edad");
+	edad=parseInt(edad);
+	
+	//valido la edad
+	while(edad<0 || edad>100)
+
+		{
+			edad=prompt("por favor ingrese una edad validad");
+			edad=parseInt(edad);
+		}
+			//pido el sexo
+			sexo=prompt("for favor ingrese su sexo");
+			//valido el sexo
+	while(sexo!="f" && sexo!="m")
+		{
+			sexo=prompt("por favor ingrese un sexo valido");
+			
+		}
+			if(sexo=="f")
+				{
+					contadorMujeres++;
+				}
+
+		//pido la nota
+		nota=prompt("ingrese su nota");
+		nota=parseInt(nota);
+		acumulador=acumulador+nota;
+		//valido la nota
+	while(nota<0 || nota>10)
+		{
+			nota=prompt("por favor ingrese una nota valida");
+			nota=parseInt(nota);
+			acumulador=acumulado+nota;
+		}
+
+
+			if(edad>=18 && sexo=="m" && nota>=6)
+			{
+				contadorVarones++;
+			}
+
+				if(nota<notaMasbaja || bandera==0)
+				{
+					notaMasbaja=nota;
+					sexoNotaMasbaja=sexo;
+
+					
+				}
+
+
+				if(edad<edadDelmasjoven || bandera==0)
+				{
+					edadDelmasjoven=edad;
+					notadelMasjoven=nota;
+					sexodelMasjoven=sexo;
+
+					bandera=1;
+				}
+
+				if(sexo=="f" && contadorMujeres==1)
+				{
+					edadDelaprimermujer=edad;
+				    notaDelaprimermujer=nota;
+				}
+				
+}
+
+
+
+
+promedio=acumulador/contador;
+
+
+
+
+
+
+alert("los varones son "+contadorVarones+" la edad de la primer mujer ingresada es "+edadDelaprimermujer+" la nota de la primer mujer ingresada es "+notaDelaprimermujer+ " la nota mas baja es " +notaMasbaja+" y su sexo es "+sexoNotaMasbaja+" la nota del mas joven es "+notadelMasjoven+" y su sexo es "+sexodelMasjoven+" y el promedio de las notas es "+promedio);
+
+}
+
+/*
 ingreso:
 maria f 15
 jose m 33
 pepe m 81
-
 mostrar:
 	cantidad
 		1- de mayores de edad= 2
@@ -14,8 +130,9 @@ mostrar:
 		5-del mayor=pepe
 		6-del menor=maria
 		7-del hombre de menor edad=jose
-
 */
+
+
 function mostrar()
 {
 
@@ -108,10 +225,8 @@ function mostrar()
 									{
 										edadDelmenor=edad;
 										nombreDelmenor=nombre;
-
 										edadDelmayor=edad;
 										nombreDelmayor=nombre;
-
 									}
 									if(edad<edadDelmenor)
 									{
@@ -148,3 +263,4 @@ function mostrar()
 	}
 	document.write("<br> el nombre del hombre menor es: "+ nombreDelhombreMenor );
 }
+
