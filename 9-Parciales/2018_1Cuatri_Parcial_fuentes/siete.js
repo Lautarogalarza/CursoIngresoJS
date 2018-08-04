@@ -8,7 +8,10 @@ function mostrar()
 	var cantidadDevarones=0
 	var notaMasbaja;
 	var sexoNotamasbaja;
+	var bandera=0;
 
+	sexo=sexo.toLowerCase()
+	
 	while(contador<5)
 	{
 
@@ -22,35 +25,30 @@ function mostrar()
 		}
 			nota=prompt("ingrese nota "+contador);
 			nota=parseInt(nota);
-			acumulador=acumulador+nota
+			acumulador=acumulador+nota;
 			while(nota<=0 && nota>=10)
 			{
 				acumulador=0
 				nota=prompt("ingrese una nota correcta "+contador)
 				nota=parseInt(nota);
-				acumulador=acumulador+nota
+				acumulador=acumulador+nota;
 			}
      
-				if(nota<=6 && sexo=="m")
+				if(nota>=6 && sexo=="m")
 
 				{
-					cantidadDevarones++
+					cantidadDevarones++;
 				}
 
-					if(contador==1)
+					if(nota<notaMasbaja || bandera==0)
 					{
-						notaMasbaja=nota
-						sexoNotamasbaja=sexo
+						notaMasbaja=nota;
+						sexoNotamasbaja=sexo;
 
+						bandera=1;
 					}
-					if(nota<notaMasbaja)
-					{
-					 notaMasbaja=nota;
-					}
-					if(sexo<sexoNotamasbaja)
-					{
-					sexoNotamasbaja=sexo;
-					}
+					
+					
      }
      		promedio=acumulador/contador
 
