@@ -1,50 +1,152 @@
-	function mostrar()
-	{
+function mostrar()
+{
 
-	var numero1;
-	var numero2;
-	var suma;
+	var numeroUno;
+	var numeroDos;
 	var resta;
+	var suma;
+
+	numeroUno=prompt("ingrese el primer numero");
+
+	numeroDos=prompt("ingrese el segundo numero");
 
 
-	numero1=prompt("ingrese el primer numero");
-	numero1=parseInt(numero1);
-
-	numero2=prompt("ingrese el segundo numero");
-	numero2=parseInt(numero2);
-
-	if(numero1==numero2)
+	if(numeroUno==numeroDos)
 
 	{
 
-	 alert(numero1+" y "+numero2);
+	 alert(numeroUno+numeroDos);
 
 	}
-	else 
-
-	 {	
-
-	    if(numero1<numero2)
-
-	   {
-	   	suma = numero1+numero2;
-	   	if(suma>10)
-	   	{
-	   		alert("la suma es mayor que 10");
-	   	}
-	    alert(suma);
-		}
+		
 		else
 		{
-			resta = numero1-numero2;
-			alert(resta);
+
+
+				numeroUno=parseInt(numeroUno);
+				numeroDos=parseInt(numeroDos);
+
+
+			if (numeroUno<numeroDos) 
+			{
+				numeroUno=parseInt(numeroUno);
+				numeroDos=parseInt(numeroDos);
+
+				suma=numeroUno+numeroDos
+
+				alert(suma);
+
+				if (suma>10) 
+				{
+					alert("la suma es "+suma+" y es mayor a 10");
+				}
+
+			}
+
+				else
+				{
+					numeroUno=parseInt(numeroUno);
+					numeroDos=parseInt(numeroDos);
+
+					resta=numeroUno-numeroDos
+
+					alert(resta);
+				}
+
+
+
+
+
+
+
+
 		}
 
 
 
-	}
 
 
 
 
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*if(numeroUno==numeroDos)
+		{
+			alert(numeroUno+numeroDos);
+		}
+
+		else
+		{
+			if(numeroUno<numeroDos);
+			{
+				numeroUno=parseInt(numeroUno);
+				numeroDos=parseInt(numeroDos);
+
+				suma=numeroUno+numeroDos
+
+				alert(suma);
+
+				if(suma>10)
+				{
+					alert("la suma es"+suma+"y es mayor a 10");
+
+				}
+
+			}
+
+				else 
+				{
+					numeroUno=parseInt(numeroUno);
+					numeroDos=parseInt(numeroDos);
+
+					resta=numeroUno-numeroDos
+
+					alert(resta);
+				}
+
+		}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

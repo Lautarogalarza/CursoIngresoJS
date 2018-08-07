@@ -1,98 +1,87 @@
 function mostrar()
 {
+	var peso;
+	var marca;
+	var temperatura;
+	var respuesta;
+	var contadorTemperaturasPares;
+	var pesoMaximo;
+	var marcaPesoMaximo;
+	var pesoMinimo;
+	var bandera;
+	var contadorCeroG;
+	var acumuladorPeso;
+	var promedio;
 
-var marca;
-var peso;
-var temperatura;
-var producto;
-var respuesta="si";
-var cantidadDeTemperaturasPares=0;
-var cantidadDeProductosAceroGrados=0;
-var cantidadDePesos=0;
-var contadorDelPeso=0;
-var pesoMaximo;
-var marcaPesoMaximo;
-var pesoMinimo;
-var bandera=0;
-var promedio;
-while(respuesta=="si")
-	{
-		peso=prompt("ingrese el peso del producto(entre 1 y 100)");
-		peso=parseInt(peso);
-		cantidadDePesos=cantidadDePesos+peso
-		contadorDelPeso++
-			while(peso<1 || peso>100)
+	 respuesta="si";
+	 contadorTemperaturasPares=0;
+	 bandera=0;
+	 contadorCeroG=0;
+	 acumuladorPeso=0;
+	 contadorPeso=0;
+
+	while(respuesta=="si")
+		{
+			peso=prompt("ingrese un peso entre el 1 y el 100");
+			peso=parseInt(peso);
+			while(peso<1 || peso>100 || isNaN(peso))
 			{
-				peso=prompt("error REingrese el peso del producto(entre 1 y 100)");
+				peso=prompt("ERROR REingrese un peso entre el 1 y el 100");
 				peso=parseInt(peso);
-		
+
 			}
-
-		temperatura=prompt("ingrese la temperatura de almacenamiento(entre -30 y 30)");
-		temperatura=parseInt(temperatura)
-
-			while(temperatura<-30 || temperatura>30)
+			temperatura=prompt("ingrese una temperatura entre -30 y 30");
+			temperatura=parseInt(temperatura);
+			while(temperatura<-30 || temperatura>30 || isNaN(temperatura))
 			{
-				temperatura=prompt("error REingrese la temperatura de almacenamiento(entre -30 y 30)");
+				temperatura=prompt("EROOR REingrese una temperatura entre -30 y 30")
 				temperatura=parseInt(temperatura);
 			}
 
-			marca=prompt("ingrese la marca del producto");
 
+			marca=prompt("ingrese una marca");
 
+			acumuladorPeso=acumuladorPeso+peso;
+			contadorPeso++;
 
 			if(temperatura%2==0)
 			{
-				cantidadDeTemperaturasPares++
+				contadorTemperaturasPares++;
 			}
-
-
-			if(temperatura<0)
-			{
-				cantidadDeProductosAceroGrados++
-			}
-
-
 
 
 			if(peso>pesoMaximo || bandera==0)
-			{
-				pesoMaximo=peso;
-				marcaPesoMaximo=marca;
-			}
+				{
+					pesoMaximo=peso
+					marcaPesoMaximo=marca
+
+				}
 
 			if(peso<pesoMinimo || bandera==0)
-			{
-				pesoMinimo=peso
+				{
+					pesoMinimo=peso
 
-				bandera=1
-			}
-
-
-
-			respuesta=prompt("desea continuar?");
+					bandera=1
+				}
 
 
 
+				if(temperatura<0)
+				{
+					contadorCeroG++
+				}
 
-	
 
+				respuesta=prompt("desea continuar?");
+		}
 
-	}
+promedio=acumuladorPeso/contadorPeso
 
-promedio=cantidadDePesos/contadorDelPeso;
-
-document.write("La cantidad de temperaturas pares es "+cantidadDeTemperaturasPares+"<br>");
-document.write("La marca del producto más pesado es "+marcaPesoMaximo+"<br>");
-document.write("La cantidad de productos que se conservan a menos de 0 grados son "+cantidadDeProductosAceroGrados+"<br>");
-document.write("El promedio del peso de todos los productos es "+promedio+"<br>");
-document.write("El peso máximo es "+pesoMaximo+" y el peso minimo es"+pesoMinimo+"<br>");
-
+			document.write("temperaturas pares "+contadorTemperaturasPares+"<br>");
+			document.write("la marca del mas pesado es "+marcaPesoMaximo+"<br>");
+			document.write("las temperaturas a 0 grados son "+contadorCeroG+"<br>");
+			document.write("el promedio de los pesos es "+promedio+"<br>");
+			document.write("el peso maximo es "+pesoMaximo+"<br>");
+			document.write("el peso minimo es "+pesoMinimo+"<br>");
 
 }
-
-/*Testeo con los siguientes valores 
-(m=pepito;p = 50; t =-300(mal) ,-30(bien) ) 
-(m=teem;p = 10; t =0 ) 
-(m=llut;p = 150(mal), 15(bien); t =-13 ) 
-(m=fpy;p = 45; t =-12 )*/
