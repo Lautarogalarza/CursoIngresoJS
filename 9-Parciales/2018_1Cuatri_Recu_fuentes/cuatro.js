@@ -1,52 +1,42 @@
 function mostrar()
 {
-	var numeroUno
-	var numeroDos
-	var suma
-	var division
 
-	numeroUno=prompt("ingrese el numero 1");
-	numeroUno=parseInt(numeroUno);
-	numeroDos=prompt("ingrese el numero 2");
-	numeroDos=parseInt(numeroDos);
+	var numeroUno;
+	var numeroDos;
+	var resultado;
+
+	numeroUno=prompt("ingrese el primer numero");
+	numeroDos=prompt("ingrese el segundo numero");
 
 	if(numeroUno==numeroDos)
+		{
+			alert(numeroUno+numeroDos);
+		}
+		else
+		{
+				numeroUno=parseInt(numeroUno);
+				numeroDos=parseInt(numeroDos);
 
-	{
+			if(numeroUno<numeroDos)
+			{
+				numeroUno=parseInt(numeroUno);
+				numeroDos=parseInt(numeroDos);
 
-	 alert(numeroUno+" y "+numeroDos);
+				resultado=numeroDos+numeroUno;
 
-	}
-
-	else 
-
-	 {	
-
-	    if(numeroUno<numeroDos)
-
-	   		{
-	   			suma = numeroUno+numeroDos;
-	   			alert("la suma es "+suma);
-	   			if(suma<50)
-	   			{
-	   				alert("la suma es "+suma+" y es menor que 50");
-	   			}
-
-	    		
+				alert(resultado);
+				
 			}
-						else
-							{
-								division = numeroUno/numeroDos;
-								alert("la division es "+division);
-		                    }
 
 
 
-	}
 
+
+
+
+
+		}
 
 
 
 }
-
-

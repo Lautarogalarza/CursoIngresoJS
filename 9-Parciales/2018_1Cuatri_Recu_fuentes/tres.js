@@ -1,28 +1,32 @@
 function mostrar()
 {
 
-/*si yo pongo 1000*0.10 me va a dar solo el porcentaje pero si pongo 1000*1.10 
-me da el numero con el porcentaje agregado
-*/
+	var precio;
+	var descuento;
+	var descuentoEnDinero;
+	var precioDescuento;
+	var IVA;
+	var precioFinal;
 
-var precio;
-var porcentajedescuento;
-var descuento;
-var descuentoendinero;
-var preciodescuento;
-var IVA;
-var final;
-precio=prompt("ingrese el precio")
-precio=parseInt(precio)
-porcentajedescuento=prompt("ingrese el porcentaje de descuento");
-descuento=porcentajedescuento/100;
-descuentoendinero=precio*descuento
-preciodescuento=precio-(precio*descuento);
-IVA=precio*0.21;
-final=preciodescuento+IVA;
-document.getElementById('elPrecioFinal').value=final;
+	precio=prompt("ingrese el precio");
+	precio=parseInt(precio);
 
-alert("el precio tiene un descuento de "+descuentoendinero+" haciendo que el precio con descuento sea "+preciodescuento+", mas un IVA de "+IVA)
+	descuento=prompt("ingrese el descuento");
+	descuento=parseInt(descuento);
+
+	descuento=descuento/100
+
+	descuentoEnDinero=precio*descuento;
+	precioDescuento=precio-descuentoEnDinero;
+
+	IVA=precio*0.21
+
+	precioFinal=precioDescuento+(precioDescuento*0.21)
+
+	document.getElementById('elPrecioFinal').value=precioFinal;
+
+	alert(" descuento en dinero "+descuentoEnDinero+" precio con descuento "+precioDescuento+" un IVA de"+IVA);	
+
 
 
 
